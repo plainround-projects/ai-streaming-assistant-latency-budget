@@ -2,6 +2,8 @@
 
 The support assistant as a streaming endpoint (server-sent events) with a small chat page. Text renders as it arrives, Stop cancels the model call on the server, every answer cites help pages that open at the cited section, seven failure states each have their own design, and an uncertain run pauses for a human reviewer, survives a server restart, resumes with the validated answer in context, and leaves a hash-chained audit trail. The budget (1.5 s at p95 to the first token) is written before anything is measured.
 
+Never used these tools before? [tech/README.md](tech/README.md) teaches each technology in this repository from zero, through its own files, with a ten-minute shortlist.
+
 | | |
 | --- | --- |
 | **Lesson** | `/prep/ai/project-streaming-assistant-latency-budget`, "A streaming assistant inside a latency budget" (`data-structure-explainer/src/content/tracks/ai/109-project-streaming-assistant-latency-budget.md` in the Plainround app) |
