@@ -18,7 +18,7 @@ The support assistant as a streaming endpoint (server-sent events) with a small 
 | Python | 3.12 or 3.13 (tested with 3.13.12; CI uses 3.13) | the server and the measurements |
 | GNU Make | 3.81 or newer | every command below |
 | Python packages | `fastapi`, `uvicorn` and `anthropic` 2.3 or newer at run time; pytest, pytest-cov, ruff, mypy, import-linter, pip-audit, httpx for development. Hash-pinned in `requirements.lock` and `requirements-dev.lock`; `make` installs them into `.venv/` | everything |
-| Docker | optional, 24 or newer, only for `make docker-build` | the server image |
+| Docker | optional, 24 or newer, only for `make docker-build` | the server image (not built during this work: Docker's storage failed on the build machine, so the Dockerfile is untested) |
 | uv | optional, only for `make lock` | regenerating the lock files |
 
 No database server, no cloud account, no API key. The state is SQLite (`db/assistant.sqlite`), built from [sql/](sql).
