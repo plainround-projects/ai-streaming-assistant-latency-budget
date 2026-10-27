@@ -120,6 +120,13 @@ make record                                   # record eight real streams into t
 make test-live                                # one real stream, and one closed early
 ```
 
+## Pending verification
+
+- pending capacity: run `make docker-build` after Docker Desktop is restarted with free disk (Docker.raw was at its 60 GiB cap on 2026-10-28).
+- pending capacity: run `make load-test` after Docker Desktop is restarted with free disk (Docker.raw was at its 60 GiB cap on 2026-10-28). The load-test figures above were taken at a load average above 40: rerun for clean figures.
+
+Everything else in the Done-when table was run and passed, from a fresh clone, on 2026-10-27.
+
 ## Author and license
 
 Written by Sumit Srivastava. Released under the MIT License, see [LICENSE](LICENSE). Changes are in [CHANGELOG.md](CHANGELOG.md).
