@@ -18,7 +18,7 @@ The support assistant as a streaming endpoint (server-sent events) with a small 
 | Python | 3.12 or 3.13 (tested with 3.13.12; CI uses 3.13) | the server and the measurements |
 | GNU Make | 3.81 or newer | every command below |
 | Python packages | `fastapi`, `uvicorn` and `anthropic` 2.3 or newer at run time; pytest, pytest-cov, ruff, mypy, import-linter, pip-audit, httpx for development. Hash-pinned in `requirements.lock` and `requirements-dev.lock`; `make` installs them into `.venv/` | everything |
-| Docker | optional, 24 or newer, only for `make docker-build` | the server image (not built during this work: Docker's storage failed on the build machine, so the Dockerfile is untested) |
+| Docker | optional, 24 or newer, only for `make docker-build` | the server image (pending capacity: run `make docker-build`; not built during this work because Docker's storage failed on the build machine, so the Dockerfile is untested) |
 | uv | optional, only for `make lock` | regenerating the lock files |
 
 No database server, no cloud account, no API key. The state is SQLite (`db/assistant.sqlite`), built from [sql/](sql).
@@ -63,7 +63,7 @@ make down            # remove db/
 | 6 | Replaying the log of an approved run reconstructs exactly what the customer saw and who approved it, and a hand-edited line is reported as tampered at the right index. | `make pause-demo`, `make tamper-demo` | The replay shows `received`, `paused`, `answered` (by `ana`), `validated`, `resumed`, `citations`, `shown` with the text. `make tamper-demo`: chain intact `None`; after editing entry 1: `1`; after deleting entry 1: `1`. Tests also edit the stored rows after dropping the SQL triggers that normally refuse edits, and a reordered pair. |
 | 7 | p50 and p95 first-token times meet the budget from step 1, reported with the request count, and the fix that bought the most time is named with its before and after. | `make load-test` | 200 requests at 5 a second per configuration (table below). The fix that bought the most is routing easy questions to the small model: server p95 from 1,567 ms to 497 ms; the other levers moved p95 by less than the jitter. |
 
-Load test (budget 1,500 ms at p95; scripted model, so the shape matters, not the values; measured on a machine with a load average above 40):
+Load test (budget 1,500 ms at p95; scripted model, so the shape matters, not the values; measured with the machine's load average above 40, so rerun for clean figures: pending capacity, run `make load-test` when `uptime` shows a load under 30):
 
 | Configuration | Requests | Server p50 (ms) | Server p95 (ms) | Client p50 (ms) | Client p95 (ms) | Budget (ms) |
 | --- | --- | --- | --- | --- | --- | --- |
