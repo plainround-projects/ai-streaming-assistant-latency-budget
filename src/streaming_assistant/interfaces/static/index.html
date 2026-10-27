@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support assistant</title>
+<style>
+  :root { color-scheme: light dark; --bg:#fff; --fg:#1b1f24; --muted:#59636e; --line:#d0d7de; --accent:#0b57d0; --warn:#9a6700; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0d1117; --fg:#e6edf3; --muted:#9198a1; --line:#30363d; --accent:#79b8ff; --warn:#d29922; } }
+  body { background:var(--bg); color:var(--fg); font:16px/1.5 system-ui, sans-serif; margin:0; }
+  main { max-width:42rem; margin:0 auto; padding:1rem; }
+  textarea { width:100%; box-sizing:border-box; font:inherit; padding:.5rem; background:var(--bg); color:var(--fg); border:1px solid var(--line); border-radius:6px; }
+  button { font:inherit; padding:.5rem 1rem; border-radius:6px; border:1px solid var(--line); background:var(--bg); color:var(--fg); cursor:pointer; }
+  button.primary { background:var(--accent); color:#fff; border-color:var(--accent); }
+  button:focus-visible, textarea:focus-visible, a:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+  #answer { white-space:pre-wrap; min-height:3rem; margin:1rem 0; }
+  #state, #paused { border:1px solid var(--warn); border-radius:6px; padding:.75rem; margin:1rem 0; }
+  [hidden] { display:none !important; }
+  .muted { color:var(--muted); font-size:.9rem; }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior:auto !important; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Ask the help center</h1>
+  <label for="question">Your question</label>
+  <textarea id="question" rows="3" placeholder="For example: how long does standard delivery take?"></textarea>
+  <p>
+    <button id="ask" class="primary" type="button">Ask</button>
+    <button id="stop" type="button" disabled>Stop</button>
+  </p>
+  <div id="answer" role="status" aria-live="polite"></div>
+  <ul id="citations"></ul>
+  <div id="state" hidden>
+    <p id="state-message"></p>
+    <button id="state-action" type="button"></button>
+  </div>
+  <div id="paused" hidden><p id="paused-message"></p></div>
+  <p class="muted" id="timing"></p>
+</main>
+<script>
+const token = new URLSearchParams(location.search).get("token") || "demo-customer-token";
+const $ = (id) => document.getElementById(id);
+let controller = null, runId = null;
+
+function reset() {
+  $("answer").textContent = ""; $("citations").innerHTML = "";
+  $("state").hidden = true; $("paused").hidden = true; $("timing").textContent = "";
+}
+function setRunning(running) { $("ask").disabled = running; $("stop").disabled = !running; }
+
+async function readEvents(response) {
+  const reader = response.body.getReader(), decoder = new TextDecoder();
+  let buffer = "";
+  for (;;) {
+    const { value, done } = await reader.read();
+    if (done) break;
+    buffer += decoder.decode(value, { stream: true });
+    let end;
+    while ((end = buffer.indexOf("\n\n")) >= 0) {
+      const block = buffer.slice(0, end); buffer = buffer.slice(end + 2);
+      const name = (block.match(/^event: (.*)$/m) || [])[1];
+      const data = JSON.parse((block.match(/^data: (.*)$/m) || [, "{}"])[1]);
+      handle(name, data);
+    }
+  }
+}
+function handle(name, data) {
+  if (name === "token") $("answer").textContent += data.text;
+  else if (name === "citation") {
+    const item = document.createElement("li"), link = document.createElement("a");
+    link.href = data.url; link.textContent = data.title + ": " + data.section; link.target = "_blank"; link.rel = "noopener";
+    item.append(link); $("citations").append(item);
+  } else if (name === "state") {
+    $("state-message").textContent = data.message; $("state").hidden = false;
+    const button = $("state-action");
+    button.textContent = { retry: "Try again", rephrase: "Rephrase", contact: "Contact a person" }[data.action];
+    button.onclick = () => data.action === "contact" ? (location.href = "mailto:support@example.com") : (data.action === "retry" ? ask() : $("question").focus());
+  } else if (name === "paused") {
+    $("paused-message").textContent = data.message; $("paused").hidden = false; runId = data.run_id; poll();
+  } else if (name === "done" && data.timings && data.timings.first_token_ms) {
+    $("timing").textContent = "First word after " + Math.round(data.timings.first_token_ms) + " ms.";
+  }
+}
+async function ask() {
+  reset(); setRunning(true); controller = new AbortController();
+  try {
+    const response = await fetch("/ask", { method: "POST", signal: controller.signal,
+      headers: { "Content-Type": "application/json", Authorization: "Bearer " + token }, body: JSON.stringify({ question: $("question").value }) });
+    if (!response.ok) { handle("state", { message: "Sign in again to ask a question.", action: "retry" }); return; }
+    runId = response.headers.get("X-Run-Id");
+    await readEvents(response);
+  } catch (error) {
+    if (error.name !== "AbortError") handle("state", { message: "The connection was lost.", action: "retry" });
+  } finally { setRunning(false); }
+}
+async function stop() {
+  if (runId) await fetch("/runs/" + runId + "/stop", { method: "POST", headers: { Authorization: "Bearer " + token } });
+}
+async function poll() {
+  for (let attempt = 0; attempt < 120; attempt++) {
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    const status = await (await fetch("/runs/" + runId + "/status", { headers: { Authorization: "Bearer " + token } })).json();
+    if (status.status === "answered") {
+      $("paused").hidden = true;
+      const response = await fetch("/runs/" + runId + "/resume", { headers: { Authorization: "Bearer " + token } });
+      await readEvents(response); return;
+    }
+  }
+}
+$("ask").addEventListener("click", ask);
+$("stop").addEventListener("click", stop);
+</script>
+</body>
+</html>

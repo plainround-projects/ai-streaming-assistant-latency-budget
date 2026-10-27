@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Review queue</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font:16px/1.5 system-ui, sans-serif; max-width:42rem; margin:0 auto; padding:1rem; }
+  article { border:1px solid #8888; border-radius:6px; padding:.75rem; margin:1rem 0; }
+  textarea, input { width:100%; box-sizing:border-box; font:inherit; margin:.25rem 0; }
+  button:focus-visible, textarea:focus-visible, input:focus-visible { outline:2px solid #0b57d0; outline-offset:2px; }
+</style>
+</head>
+<body>
+<h1>Paused questions</h1>
+<p>Answer, then cite a help section (for example help-07#refund-timing) or tick that no page covers it.</p>
+<div id="list" role="region" aria-live="polite"></div>
+<script>
+const token = new URLSearchParams(location.search).get("token") || "demo-reviewer-token";
+const headers = { "Content-Type": "application/json", Authorization: "Bearer " + token };
+async function load() {
+  const runs = await (await fetch("/reviews", { headers })).json();
+  const list = document.getElementById("list"); list.textContent = runs.length ? "" : "Nothing is waiting.";
+  for (const run of runs) {
+    const card = document.createElement("article");
+    card.innerHTML = "<p><strong></strong></p><p class='why'></p><label>Your answer<textarea rows='3'></textarea></label>" +
+      "<label>Cited section<input placeholder='help-07#refund-timing'></label><label><input type='checkbox'> No page covers this</label>" +
+      "<label>Your id<input value='reviewer-1'></label><button type='button'>Send</button><p class='result' role='status'></p>";
+    card.querySelector("strong").textContent = run.question;
+    card.querySelector(".why").textContent = "Why it paused: " + run.reason + ". Retrieved: " + run.retrieved.join(", ");
+    const [answer] = card.querySelectorAll("textarea"), [cite, , reviewer] = card.querySelectorAll("input"), box = card.querySelectorAll("input")[1];
+    card.querySelector("button").addEventListener("click", async () => {
+      const response = await fetch("/reviews/" + run.run_id + "/answer", { method: "POST", headers,
+        body: JSON.stringify({ reviewer_id: reviewer.value, answer: answer.value, cited: cite.value ? [cite.value] : [], no_page: box.checked }) });
+      card.querySelector(".result").textContent = response.ok ? "Saved. The customer's page will resume." : (await response.json()).detail;
+      if (response.ok) setTimeout(load, 800);
+    });
+    list.append(card);
+  }
+}
+load();
+</script>
+</body>
+</html>
