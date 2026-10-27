@@ -53,3 +53,11 @@ Start with the language (`python.md`), then the tools that build and check it (`
 1. [`python.md`](python.md): the language of every module, test and script
 2. [`server-sent-events.md`](server-sent-events.md): the wire format of the streamed answer
 3. [`asyncio.md`](asyncio.md): streaming, timeouts and cancelling the upstream call
+
+## Where every source file is explained
+
+Every tracked source, script, test and configuration file of this repository is quoted and explained in these notes, so nothing has to be taken on trust:
+
+- `python.md`: every Python file under `src/` and `scripts/`, statement by statement (the section "Every Python file of the program").
+- `pytest.md`: every Python test file under `tests/`, statement by statement.
+- `make.md`, `bash.md`, `pyproject-toml.md`, `yaml.md`, `github-actions.md`, `docker*.md`, `dotenv.md`, `sql.md`, `jsonl.md`: the other files, each in the note of its own technology.

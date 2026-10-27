@@ -161,6 +161,74 @@ export
 - `-include .env`: Read the file `.env` and treat each `NAME=value` line as a make variable. The leading `-` means: do not fail if the file does not exist.
 - `export`: Pass every make variable to the commands that make runs, as environment variables. This is how settings in `.env` reach the Python programs.
 
+
+<!-- extras -->
+### `.env.example`, every line
+
+This file is a template. `make` copies it to `.env` the first time, and the program reads `.env` for its settings. A line `NAME=value` sets one environment variable; a line starting with `#` is a comment. Nothing secret is stored in the template: the line for the API key is empty on purpose.
+
+```dotenv
+# Copy to .env (make up does it). Nothing here is a secret.
+LOG_LEVEL=INFO
+# scripted: an offline model with configurable latency; recorded: tests/fixtures/cassettes; claude: the real API
+MODEL_ADAPTER=scripted
+CASSETTE=tests/fixtures/cassettes/stream-v1.json
+MODEL_ID=claude-sonnet-5-5
+FAST_MODEL_ID=claude-haiku-5-5
+# Only for MODEL_ADAPTER=claude and make test-live. Never commit a real key.
+ANTHROPIC_API_KEY=
+DATABASE=db/assistant.sqlite
+HOST=127.0.0.1
+PORT=8100
+```
+
+- `LOG_LEVEL=INFO`: sets the environment variable `LOG_LEVEL` to the value `INFO`. The comment above it says: *Copy to .env (make up does it). Nothing here is a secret.*
+- `MODEL_ADAPTER=scripted`: sets the environment variable `MODEL_ADAPTER` to the value `scripted`. The comment above it says: *scripted: an offline model with configurable latency; recorded: tests/fixtures/cassettes; claude: the real API*
+- `CASSETTE=tests/fixtures/cassettes/stream-v1.json`: sets the environment variable `CASSETTE` to the value `tests/fixtures/cassettes/stream-v1.json`.
+- `MODEL_ID=claude-sonnet-5-5`: sets the environment variable `MODEL_ID` to the value `claude-sonnet-5-5`.
+- `FAST_MODEL_ID=claude-haiku-5-5`: sets the environment variable `FAST_MODEL_ID` to the value `claude-haiku-5-5`.
+- `ANTHROPIC_API_KEY=`: sets the environment variable `ANTHROPIC_API_KEY` to an empty value (nothing is set). The comment above it says: *Only for MODEL_ADAPTER=claude and make test-live. Never commit a real key.*
+- `DATABASE=db/assistant.sqlite`: sets the environment variable `DATABASE` to the value `db/assistant.sqlite`.
+- `HOST=127.0.0.1`: sets the environment variable `HOST` to the value `127.0.0.1`.
+- `PORT=8100`: sets the environment variable `PORT` to the value `8100`.
+
+```dotenv
+FIRST_TOKEN_TIMEOUT_SECONDS=3
+IDLE_TIMEOUT_SECONDS=5
+# The first-token budget the load test reports against (p95), in milliseconds
+FIRST_TOKEN_BUDGET_MS=1500
+# on/off switches; the load test flips them per configuration
+PAUSE=on
+STABLE_PREFIX_FIRST=on
+PARALLEL_PREP=on
+CACHE_RETRIEVAL=on
+ROUTE_EASY_TO_FAST=off
+WARM_INDEX=on
+# Latency of the scripted model (settings, not measurements of a provider)
+SCRIPTED_TTFT_STANDARD_MS=1300
+```
+
+- `FIRST_TOKEN_TIMEOUT_SECONDS=3`: sets the environment variable `FIRST_TOKEN_TIMEOUT_SECONDS` to the value `3`.
+- `IDLE_TIMEOUT_SECONDS=5`: sets the environment variable `IDLE_TIMEOUT_SECONDS` to the value `5`.
+- `FIRST_TOKEN_BUDGET_MS=1500`: sets the environment variable `FIRST_TOKEN_BUDGET_MS` to the value `1500`. The comment above it says: *The first-token budget the load test reports against (p95), in milliseconds*
+- `PAUSE=on`: sets the environment variable `PAUSE` to the value `on`. The comment above it says: *on/off switches; the load test flips them per configuration*
+- `STABLE_PREFIX_FIRST=on`: sets the environment variable `STABLE_PREFIX_FIRST` to the value `on`.
+- `PARALLEL_PREP=on`: sets the environment variable `PARALLEL_PREP` to the value `on`.
+- `CACHE_RETRIEVAL=on`: sets the environment variable `CACHE_RETRIEVAL` to the value `on`.
+- `ROUTE_EASY_TO_FAST=off`: sets the environment variable `ROUTE_EASY_TO_FAST` to the value `off`.
+- `WARM_INDEX=on`: sets the environment variable `WARM_INDEX` to the value `on`.
+- `SCRIPTED_TTFT_STANDARD_MS=1300`: sets the environment variable `SCRIPTED_TTFT_STANDARD_MS` to the value `1300`. The comment above it says: *Latency of the scripted model (settings, not measurements of a provider)*
+
+```dotenv
+SCRIPTED_TTFT_FAST_MS=350
+SCRIPTED_TOKEN_MS=15
+```
+
+- `SCRIPTED_TTFT_FAST_MS=350`: sets the environment variable `SCRIPTED_TTFT_FAST_MS` to the value `350`.
+- `SCRIPTED_TOKEN_MS=15`: sets the environment variable `SCRIPTED_TOKEN_MS` to the value `15`.
+
+<!-- /extras -->
+
 ## Try it yourself
 
 Run these from the repository folder (after `make up`).
