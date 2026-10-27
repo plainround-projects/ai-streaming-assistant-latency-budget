@@ -1,0 +1,135 @@
+{
+ "entries": {
+  "5db0f541fa5d50f8dc478236a27dd821e04de54dad075b8167195881f6fe7697": {
+   "input_tokens": 319,
+   "output_tokens": 12,
+   "pieces": [
+    "The ",
+    "shop ",
+    "ships ",
+    "to ",
+    "the ",
+    "countries ",
+    "listed ",
+    "on ",
+    "the ",
+    "shipping ",
+    "page. ",
+    "[help-19#the-shop-ships-to]"
+   ]
+  },
+  "63cd1924681720df494031a74f670795726e402fe86b9ccc396dada6c71003f4": {
+   "input_tokens": 321,
+   "output_tokens": 10,
+   "pieces": [
+    "The ",
+    "delivery ",
+    "address ",
+    "can ",
+    "change ",
+    "until ",
+    "the ",
+    "order ",
+    "ships. ",
+    "[help-08#the-delivery-address-can]"
+   ]
+  },
+  "64a8fc7a35decb0e880c3eb8695aeb3ffebc31fd6295af8583560790776ccc7c": {
+   "input_tokens": 304,
+   "output_tokens": 7,
+   "pieces": [
+    "Points ",
+    "expire ",
+    "after ",
+    "twenty ",
+    "four ",
+    "months. ",
+    "[help-24#points-expire-after-twenty]"
+   ]
+  },
+  "6f146e69e76e1db348d3c67ea13e94f588d61c05922ef0b0639a8f4afd3b460e": {
+   "input_tokens": 311,
+   "output_tokens": 11,
+   "pieces": [
+    "A ",
+    "declined ",
+    "payment ",
+    "keeps ",
+    "the ",
+    "basket ",
+    "for ",
+    "twenty ",
+    "four ",
+    "hours. ",
+    "[help-10#a-declined-payment-keeps]"
+   ]
+  },
+  "a1ad356f30ab7e32e74ab695c34cf52e09aa8fa9f2b0e0c37ed30b2147f9b7df": {
+   "input_tokens": 312,
+   "output_tokens": 8,
+   "pieces": [
+    "Email ",
+    "replies ",
+    "arrive ",
+    "within ",
+    "one ",
+    "business ",
+    "day. ",
+    "[help-28#email-replies-arrive-within]"
+   ]
+  },
+  "dc5b66ee9e77fd8ca813feac6efa2842ed88ba4dd55b4920a8480933d233eed9": {
+   "input_tokens": 301,
+   "output_tokens": 12,
+   "pieces": [
+    "Normal ",
+    "wear ",
+    "is ",
+    "not ",
+    "covered ",
+    "by ",
+    "the ",
+    "warranty. ",
+    "[help-16#normal-wear-is-not] ",
+    "See ",
+    "also ",
+    "[help-99#made-up]."
+   ]
+  },
+  "f447f0c0c472ac9363df9c2553f2f38a435adffe2a15740f3df29cb9cc587d7b": {
+   "input_tokens": 304,
+   "output_tokens": 10,
+   "pieces": [
+    "Use ",
+    "the ",
+    "reset ",
+    "link ",
+    "on ",
+    "the ",
+    "sign ",
+    "in ",
+    "page. ",
+    "[help-13#use-the-reset-link]"
+   ]
+  },
+  "f6cd8425d9e4c48705a806207e723c16d90bc96409d178acf165a4e54de9a6e0": {
+   "input_tokens": 303,
+   "output_tokens": 11,
+   "pieces": [
+    "Chat ",
+    "support ",
+    "is ",
+    "open ",
+    "every ",
+    "day ",
+    "from ",
+    "eight ",
+    "to ",
+    "eight. ",
+    "[help-28#chat-support-is-open]"
+   ]
+  }
+ },
+ "model": "authored-scripted-stream",
+ "provenance": "authored by scripts/record_streams.py --author from the scripted streaming model; not a model recording. Replace with `make record`."
+}

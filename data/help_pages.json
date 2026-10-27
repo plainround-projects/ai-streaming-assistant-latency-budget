@@ -1,0 +1,632 @@
+[
+ {
+  "page_id": "help-01",
+  "title": "Shipping times",
+  "sections": [
+   {
+    "anchor": "standard-delivery-takes-three",
+    "heading": "Standard delivery takes three to",
+    "text": "Standard delivery takes three to five business days after dispatch. This applies to delivery questions about orders from the shop and is explained in the shipping times page."
+   },
+   {
+    "anchor": "express-delivery-arrives-within",
+    "heading": "Express delivery arrives within two",
+    "text": "Express delivery arrives within two business days where available. This applies to delivery questions about orders from the shop and is explained in the shipping times page."
+   },
+   {
+    "anchor": "orders-placed-after-the",
+    "heading": "Orders placed after the cutoff",
+    "text": "Orders placed after the cutoff hour ship on the next business day. This applies to delivery questions about orders from the shop and is explained in the shipping times page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-02",
+  "title": "Tracking a parcel",
+  "sections": [
+   {
+    "anchor": "a-tracking-link-is",
+    "heading": "A tracking link is emailed",
+    "text": "A tracking link is emailed once the parcel leaves the warehouse. This applies to tracking questions about orders from the shop and is explained in the tracking a parcel page."
+   },
+   {
+    "anchor": "the-tracking-page-shows",
+    "heading": "The tracking page shows the",
+    "text": "The tracking page shows the carrier hub the parcel last passed. This applies to tracking questions about orders from the shop and is explained in the tracking a parcel page."
+   },
+   {
+    "anchor": "a-parcel-marked-delivered",
+    "heading": "A parcel marked delivered but",
+    "text": "A parcel marked delivered but not received should be reported within five days. This applies to tracking questions about orders from the shop and is explained in the tracking a parcel page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-03",
+  "title": "Return policy",
+  "sections": [
+   {
+    "anchor": "items-can-be-returned",
+    "heading": "Items can be returned within",
+    "text": "Items can be returned within thirty days of delivery. This applies to returns questions about orders from the shop and is explained in the return policy page."
+   },
+   {
+    "anchor": "returned-items-must-be",
+    "heading": "Returned items must be unused",
+    "text": "Returned items must be unused and in the original packaging. This applies to returns questions about orders from the shop and is explained in the return policy page."
+   },
+   {
+    "anchor": "sale-items-follow-the",
+    "heading": "Sale items follow the same",
+    "text": "Sale items follow the same thirty day return window. This applies to returns questions about orders from the shop and is explained in the return policy page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-04",
+  "title": "Refund timing",
+  "sections": [
+   {
+    "anchor": "refunds-are-issued-to",
+    "heading": "Refunds are issued to the",
+    "text": "Refunds are issued to the original payment method after the parcel is checked. This applies to refunds questions about orders from the shop and is explained in the refund timing page."
+   },
+   {
+    "anchor": "a-refund-usually-appears",
+    "heading": "A refund usually appears on",
+    "text": "A refund usually appears on the card within five business days. This applies to refunds questions about orders from the shop and is explained in the refund timing page."
+   },
+   {
+    "anchor": "store-credit-refunds-are",
+    "heading": "Store credit refunds are available",
+    "text": "Store credit refunds are available immediately. This applies to refunds questions about orders from the shop and is explained in the refund timing page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-05",
+  "title": "Exchanges",
+  "sections": [
+   {
+    "anchor": "an-exchange-for-another",
+    "heading": "An exchange for another size",
+    "text": "An exchange for another size is free within thirty days. This applies to exchange questions about orders from the shop and is explained in the exchanges page."
+   },
+   {
+    "anchor": "the-exchange-parcel-ships",
+    "heading": "The exchange parcel ships once",
+    "text": "The exchange parcel ships once the first item scans at the warehouse. This applies to exchange questions about orders from the shop and is explained in the exchanges page."
+   },
+   {
+    "anchor": "colour-exchanges-depend-on",
+    "heading": "Colour exchanges depend on current",
+    "text": "Colour exchanges depend on current stock. This applies to exchange questions about orders from the shop and is explained in the exchanges page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-06",
+  "title": "Damaged items",
+  "sections": [
+   {
+    "anchor": "report-a-damaged-item",
+    "heading": "Report a damaged item within",
+    "text": "Report a damaged item within fourteen days with a photo. This applies to damage questions about orders from the shop and is explained in the damaged items page."
+   },
+   {
+    "anchor": "a-replacement-ships-at",
+    "heading": "A replacement ships at no",
+    "text": "A replacement ships at no cost once the photo is reviewed. This applies to damage questions about orders from the shop and is explained in the damaged items page."
+   },
+   {
+    "anchor": "damaged-parcels-can-be",
+    "heading": "Damaged parcels can be refused",
+    "text": "Damaged parcels can be refused at the door. This applies to damage questions about orders from the shop and is explained in the damaged items page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-07",
+  "title": "Missing items",
+  "sections": [
+   {
+    "anchor": "a-missing-item-should",
+    "heading": "A missing item should be",
+    "text": "A missing item should be reported within seven days of delivery. This applies to missing questions about orders from the shop and is explained in the missing items page."
+   },
+   {
+    "anchor": "multi-item-orders-can",
+    "heading": "Multi item orders can arrive",
+    "text": "Multi item orders can arrive in separate boxes. This applies to missing questions about orders from the shop and is explained in the missing items page."
+   },
+   {
+    "anchor": "the-packing-slip-lists",
+    "heading": "The packing slip lists every",
+    "text": "The packing slip lists every item that left the warehouse. This applies to missing questions about orders from the shop and is explained in the missing items page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-08",
+  "title": "Changing an address",
+  "sections": [
+   {
+    "anchor": "the-delivery-address-can",
+    "heading": "The delivery address can change",
+    "text": "The delivery address can change until the order ships. This applies to address questions about orders from the shop and is explained in the changing an address page."
+   },
+   {
+    "anchor": "saved-addresses-live-under",
+    "heading": "Saved addresses live under account",
+    "text": "Saved addresses live under account settings. This applies to address questions about orders from the shop and is explained in the changing an address page."
+   },
+   {
+    "anchor": "a-parcel-already-with",
+    "heading": "A parcel already with the",
+    "text": "A parcel already with the carrier cannot be redirected by the shop. This applies to address questions about orders from the shop and is explained in the changing an address page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-09",
+  "title": "Cancelling an order",
+  "sections": [
+   {
+    "anchor": "an-order-can-be",
+    "heading": "An order can be cancelled",
+    "text": "An order can be cancelled until it has been dispatched. This applies to cancel questions about orders from the shop and is explained in the cancelling an order page."
+   },
+   {
+    "anchor": "a-cancelled-order-releases",
+    "heading": "A cancelled order releases the",
+    "text": "A cancelled order releases the payment within three business days. This applies to cancel questions about orders from the shop and is explained in the cancelling an order page."
+   },
+   {
+    "anchor": "cancelled-gift-card-payments",
+    "heading": "Cancelled gift card payments return",
+    "text": "Cancelled gift card payments return to the card balance. This applies to cancel questions about orders from the shop and is explained in the cancelling an order page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-10",
+  "title": "Payment methods",
+  "sections": [
+   {
+    "anchor": "cards-bank-transfer-and",
+    "heading": "Cards, bank transfer and store",
+    "text": "Cards, bank transfer and store credit are accepted. This applies to payment questions about orders from the shop and is explained in the payment methods page."
+   },
+   {
+    "anchor": "payment-is-taken-when",
+    "heading": "Payment is taken when the",
+    "text": "Payment is taken when the order ships. This applies to payment questions about orders from the shop and is explained in the payment methods page."
+   },
+   {
+    "anchor": "a-declined-payment-keeps",
+    "heading": "A declined payment keeps the",
+    "text": "A declined payment keeps the basket for twenty four hours. This applies to payment questions about orders from the shop and is explained in the payment methods page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-11",
+  "title": "Promo codes",
+  "sections": [
+   {
+    "anchor": "each-promo-code-works",
+    "heading": "Each promo code works once",
+    "text": "Each promo code works once per account. This applies to promo questions about orders from the shop and is explained in the promo codes page."
+   },
+   {
+    "anchor": "codes-apply-to-full",
+    "heading": "Codes apply to full price",
+    "text": "Codes apply to full price items only. This applies to promo questions about orders from the shop and is explained in the promo codes page."
+   },
+   {
+    "anchor": "expired-codes-cannot-be",
+    "heading": "Expired codes cannot be extended",
+    "text": "Expired codes cannot be extended by support. This applies to promo questions about orders from the shop and is explained in the promo codes page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-12",
+  "title": "Gift cards",
+  "sections": [
+   {
+    "anchor": "gift-cards-never-expire",
+    "heading": "Gift cards never expire and",
+    "text": "Gift cards never expire and can be used across several orders. This applies to giftcard questions about orders from the shop and is explained in the gift cards page."
+   },
+   {
+    "anchor": "the-balance-is-shown",
+    "heading": "The balance is shown on",
+    "text": "The balance is shown on the gift card page. This applies to giftcard questions about orders from the shop and is explained in the gift cards page."
+   },
+   {
+    "anchor": "lost-gift-cards-can",
+    "heading": "Lost gift cards can be",
+    "text": "Lost gift cards can be blocked and reissued with proof of purchase. This applies to giftcard questions about orders from the shop and is explained in the gift cards page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-13",
+  "title": "Resetting a password",
+  "sections": [
+   {
+    "anchor": "use-the-reset-link",
+    "heading": "Use the reset link on",
+    "text": "Use the reset link on the sign in page. This applies to password questions about orders from the shop and is explained in the resetting a password page."
+   },
+   {
+    "anchor": "the-reset-link-expires",
+    "heading": "The reset link expires after",
+    "text": "The reset link expires after one hour. This applies to password questions about orders from the shop and is explained in the resetting a password page."
+   },
+   {
+    "anchor": "support-cannot-read-or",
+    "heading": "Support cannot read or set",
+    "text": "Support cannot read or set a password for you. This applies to password questions about orders from the shop and is explained in the resetting a password page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-14",
+  "title": "Deleting an account",
+  "sections": [
+   {
+    "anchor": "account-deletion-is-available",
+    "heading": "Account deletion is available under",
+    "text": "Account deletion is available under privacy settings. This applies to account questions about orders from the shop and is explained in the deleting an account page."
+   },
+   {
+    "anchor": "order-history-is-kept",
+    "heading": "Order history is kept for",
+    "text": "Order history is kept for tax records after deletion. This applies to account questions about orders from the shop and is explained in the deleting an account page."
+   },
+   {
+    "anchor": "deletion-finishes-within-thirty",
+    "heading": "Deletion finishes within thirty days",
+    "text": "Deletion finishes within thirty days. This applies to account questions about orders from the shop and is explained in the deleting an account page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-15",
+  "title": "Privacy and data",
+  "sections": [
+   {
+    "anchor": "personal-data-is-used",
+    "heading": "Personal data is used only",
+    "text": "Personal data is used only to run orders and support. This applies to privacy questions about orders from the shop and is explained in the privacy and data page."
+   },
+   {
+    "anchor": "a-copy-of-your",
+    "heading": "A copy of your data",
+    "text": "A copy of your data can be requested from privacy settings. This applies to privacy questions about orders from the shop and is explained in the privacy and data page."
+   },
+   {
+    "anchor": "marketing-email-can-be",
+    "heading": "Marketing email can be switched",
+    "text": "Marketing email can be switched off at any time. This applies to privacy questions about orders from the shop and is explained in the privacy and data page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-16",
+  "title": "Warranty",
+  "sections": [
+   {
+    "anchor": "products-carry-a-one",
+    "heading": "Products carry a one year",
+    "text": "Products carry a one year warranty against defects. This applies to warranty questions about orders from the shop and is explained in the warranty page."
+   },
+   {
+    "anchor": "warranty-claims-need-the",
+    "heading": "Warranty claims need the order",
+    "text": "Warranty claims need the order number and a photo. This applies to warranty questions about orders from the shop and is explained in the warranty page."
+   },
+   {
+    "anchor": "normal-wear-is-not",
+    "heading": "Normal wear is not covered",
+    "text": "Normal wear is not covered by the warranty. This applies to warranty questions about orders from the shop and is explained in the warranty page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-17",
+  "title": "Size guide",
+  "sections": [
+   {
+    "anchor": "every-product-page-links",
+    "heading": "Every product page links a",
+    "text": "Every product page links a size guide below the size picker. This applies to sizing questions about orders from the shop and is explained in the size guide page."
+   },
+   {
+    "anchor": "jackets-run-true-to",
+    "heading": "Jackets run true to size",
+    "text": "Jackets run true to size while shoes run half a size small. This applies to sizing questions about orders from the shop and is explained in the size guide page."
+   },
+   {
+    "anchor": "measurements-are-given-in",
+    "heading": "Measurements are given in centimetres",
+    "text": "Measurements are given in centimetres and inches. This applies to sizing questions about orders from the shop and is explained in the size guide page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-18",
+  "title": "Stock alerts",
+  "sections": [
+   {
+    "anchor": "use-notify-me-on",
+    "heading": "Use notify me on a",
+    "text": "Use notify me on a sold out product to get an email on restock. This applies to stockalert questions about orders from the shop and is explained in the stock alerts page."
+   },
+   {
+    "anchor": "restock-dates-are-estimates",
+    "heading": "Restock dates are estimates and",
+    "text": "Restock dates are estimates and can move. This applies to stockalert questions about orders from the shop and is explained in the stock alerts page."
+   },
+   {
+    "anchor": "alerts-expire-after-ninety",
+    "heading": "Alerts expire after ninety days",
+    "text": "Alerts expire after ninety days. This applies to stockalert questions about orders from the shop and is explained in the stock alerts page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-19",
+  "title": "International shipping",
+  "sections": [
+   {
+    "anchor": "the-shop-ships-to",
+    "heading": "The shop ships to the",
+    "text": "The shop ships to the countries listed on the shipping page. This applies to abroad questions about orders from the shop and is explained in the international shipping page."
+   },
+   {
+    "anchor": "duties-and-taxes-are",
+    "heading": "Duties and taxes are shown",
+    "text": "Duties and taxes are shown before payment. This applies to abroad questions about orders from the shop and is explained in the international shipping page."
+   },
+   {
+    "anchor": "delivery-abroad-takes-seven",
+    "heading": "Delivery abroad takes seven to",
+    "text": "Delivery abroad takes seven to ten business days. This applies to abroad questions about orders from the shop and is explained in the international shipping page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-20",
+  "title": "Express delivery",
+  "sections": [
+   {
+    "anchor": "express-delivery-is-offered",
+    "heading": "Express delivery is offered at",
+    "text": "Express delivery is offered at checkout when the address qualifies. This applies to express questions about orders from the shop and is explained in the express delivery page."
+   },
+   {
+    "anchor": "express-orders-must-be",
+    "heading": "Express orders must be placed",
+    "text": "Express orders must be placed before noon. This applies to express questions about orders from the shop and is explained in the express delivery page."
+   },
+   {
+    "anchor": "express-delivery-is-not",
+    "heading": "Express delivery is not available",
+    "text": "Express delivery is not available on bank holidays. This applies to express questions about orders from the shop and is explained in the express delivery page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-21",
+  "title": "Pickup points",
+  "sections": [
+   {
+    "anchor": "choose-a-pickup-point",
+    "heading": "Choose a pickup point at",
+    "text": "Choose a pickup point at checkout from the map. This applies to pickup questions about orders from the shop and is explained in the pickup points page."
+   },
+   {
+    "anchor": "parcels-wait-at-a",
+    "heading": "Parcels wait at a pickup",
+    "text": "Parcels wait at a pickup point for seven days. This applies to pickup questions about orders from the shop and is explained in the pickup points page."
+   },
+   {
+    "anchor": "a-photo-identity-document",
+    "heading": "A photo identity document is",
+    "text": "A photo identity document is needed to collect. This applies to pickup questions about orders from the shop and is explained in the pickup points page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-22",
+  "title": "Customs and duties",
+  "sections": [
+   {
+    "anchor": "duties-are-calculated-at",
+    "heading": "Duties are calculated at checkout",
+    "text": "Duties are calculated at checkout for supported countries. This applies to customs questions about orders from the shop and is explained in the customs and duties page."
+   },
+   {
+    "anchor": "nothing-is-payable-on",
+    "heading": "Nothing is payable on delivery",
+    "text": "Nothing is payable on delivery for prepaid duties. This applies to customs questions about orders from the shop and is explained in the customs and duties page."
+   },
+   {
+    "anchor": "returns-from-abroad-use",
+    "heading": "Returns from abroad use the",
+    "text": "Returns from abroad use the prepaid label. This applies to customs questions about orders from the shop and is explained in the customs and duties page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-23",
+  "title": "Invoices and receipts",
+  "sections": [
+   {
+    "anchor": "invoices-are-attached-to",
+    "heading": "Invoices are attached to each",
+    "text": "Invoices are attached to each order in your account. This applies to invoice questions about orders from the shop and is explained in the invoices and receipts page."
+   },
+   {
+    "anchor": "a-company-name-can",
+    "heading": "A company name can be",
+    "text": "A company name can be added before the order ships. This applies to invoice questions about orders from the shop and is explained in the invoices and receipts page."
+   },
+   {
+    "anchor": "corrected-invoices-are-issued",
+    "heading": "Corrected invoices are issued within",
+    "text": "Corrected invoices are issued within two business days. This applies to invoice questions about orders from the shop and is explained in the invoices and receipts page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-24",
+  "title": "Loyalty points",
+  "sections": [
+   {
+    "anchor": "one-point-is-earned",
+    "heading": "One point is earned for",
+    "text": "One point is earned for every currency unit spent. This applies to loyalty questions about orders from the shop and is explained in the loyalty points page."
+   },
+   {
+    "anchor": "points-can-be-applied",
+    "heading": "Points can be applied at",
+    "text": "Points can be applied at checkout as a discount. This applies to loyalty questions about orders from the shop and is explained in the loyalty points page."
+   },
+   {
+    "anchor": "points-expire-after-twenty",
+    "heading": "Points expire after twenty four",
+    "text": "Points expire after twenty four months. This applies to loyalty questions about orders from the shop and is explained in the loyalty points page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-25",
+  "title": "Student discount",
+  "sections": [
+   {
+    "anchor": "students-get-ten-percent",
+    "heading": "Students get ten percent off",
+    "text": "Students get ten percent off with a verified student email. This applies to student questions about orders from the shop and is explained in the student discount page."
+   },
+   {
+    "anchor": "verification-lasts-one-year",
+    "heading": "Verification lasts one year",
+    "text": "Verification lasts one year. This applies to student questions about orders from the shop and is explained in the student discount page."
+   },
+   {
+    "anchor": "the-discount-cannot-be",
+    "heading": "The discount cannot be combined",
+    "text": "The discount cannot be combined with promo codes. This applies to student questions about orders from the shop and is explained in the student discount page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-26",
+  "title": "Bulk orders",
+  "sections": [
+   {
+    "anchor": "orders-above-twenty-units",
+    "heading": "Orders above twenty units receive",
+    "text": "Orders above twenty units receive a team quote. This applies to bulk questions about orders from the shop and is explained in the bulk orders page."
+   },
+   {
+    "anchor": "quotes-are-valid-for",
+    "heading": "Quotes are valid for fourteen",
+    "text": "Quotes are valid for fourteen days. This applies to bulk questions about orders from the shop and is explained in the bulk orders page."
+   },
+   {
+    "anchor": "bulk-orders-ship-in",
+    "heading": "Bulk orders ship in consolidated",
+    "text": "Bulk orders ship in consolidated pallets. This applies to bulk questions about orders from the shop and is explained in the bulk orders page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-27",
+  "title": "Gift wrapping",
+  "sections": [
+   {
+    "anchor": "gift-wrap-is-a",
+    "heading": "Gift wrap is a checkout",
+    "text": "Gift wrap is a checkout option for a small fee. This applies to giftwrap questions about orders from the shop and is explained in the gift wrapping page."
+   },
+   {
+    "anchor": "a-printed-card-carries",
+    "heading": "A printed card carries your",
+    "text": "A printed card carries your message. This applies to giftwrap questions about orders from the shop and is explained in the gift wrapping page."
+   },
+   {
+    "anchor": "gift-wrapped-items-are",
+    "heading": "Gift wrapped items are packed",
+    "text": "Gift wrapped items are packed with no price slip. This applies to giftwrap questions about orders from the shop and is explained in the gift wrapping page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-28",
+  "title": "Store hours",
+  "sections": [
+   {
+    "anchor": "chat-support-is-open",
+    "heading": "Chat support is open every",
+    "text": "Chat support is open every day from eight to eight. This applies to hours questions about orders from the shop and is explained in the store hours page."
+   },
+   {
+    "anchor": "phone-support-is-closed",
+    "heading": "Phone support is closed on",
+    "text": "Phone support is closed on bank holidays. This applies to hours questions about orders from the shop and is explained in the store hours page."
+   },
+   {
+    "anchor": "email-replies-arrive-within",
+    "heading": "Email replies arrive within one",
+    "text": "Email replies arrive within one business day. This applies to hours questions about orders from the shop and is explained in the store hours page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-29",
+  "title": "Contacting support",
+  "sections": [
+   {
+    "anchor": "use-chat-for-the",
+    "heading": "Use chat for the fastest",
+    "text": "Use chat for the fastest answer. This applies to contact questions about orders from the shop and is explained in the contacting support page."
+   },
+   {
+    "anchor": "include-the-order-number",
+    "heading": "Include the order number in",
+    "text": "Include the order number in every message. This applies to contact questions about orders from the shop and is explained in the contacting support page."
+   },
+   {
+    "anchor": "escalations-are-answered-by",
+    "heading": "Escalations are answered by a",
+    "text": "Escalations are answered by a senior agent within one day. This applies to contact questions about orders from the shop and is explained in the contacting support page."
+   }
+  ]
+ },
+ {
+  "page_id": "help-30",
+  "title": "Product care",
+  "sections": [
+   {
+    "anchor": "wool-items-are-hand",
+    "heading": "Wool items are hand washed",
+    "text": "Wool items are hand washed cold. This applies to care questions about orders from the shop and is explained in the product care page."
+   },
+   {
+    "anchor": "leather-bags-are-wiped",
+    "heading": "Leather bags are wiped with",
+    "text": "Leather bags are wiped with a damp cloth. This applies to care questions about orders from the shop and is explained in the product care page."
+   },
+   {
+    "anchor": "canvas-can-be-machine",
+    "heading": "Canvas can be machine washed",
+    "text": "Canvas can be machine washed gently. This applies to care questions about orders from the shop and is explained in the product care page."
+   }
+  ]
+ }
+]
