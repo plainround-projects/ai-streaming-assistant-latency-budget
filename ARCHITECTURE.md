@@ -24,6 +24,8 @@ Every outcome is an event, not an exception: `token`, `citation`, `state`, `paus
 
 ## Data flow
 
+Drawn versions of this figure and of the walk-through: [the architecture](docs/diagrams/architecture.svg) and [one run](docs/diagrams/flow.svg).
+
 ```text
 POST /ask --> authenticate || retrieve  (timed stages)
                    |

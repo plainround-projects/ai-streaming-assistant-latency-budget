@@ -13,6 +13,24 @@ Never used these tools before? [tech/README.md](tech/README.md) teaches each tec
 
 **What the offline run is.** No model key was available to the build, so the default model is `ScriptedStreamingModel`: it writes its answer from the first retrieved passage (with a citation, and now and then an invented one), and its time to first token, prefill cost, token pace and failures are **settings, not measurements of any provider**. Every latency number below therefore shows how the budget is measured and which fix matters in that model of the world; it does not say what a real provider would do. The Claude adapter, the recording command (`make record`) and the live test exist and have not been run. The 200 questions are synthetic: the 180 ordinary ones quote the help pages, so retrieval and citation accuracy are optimistic.
 
+## Architecture
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/diagrams/architecture-dark.svg">
+  <img alt="A Customer asks through the chat page and receives server-sent events from the Server. The Server calls the Assistant, which uses the domain decisions of retrieval, routing, citations and audit, and streams from a StreamingModel adapter. A paused run goes to paused_runs and the Audit log in SQLite, and a Reviewer answers through the Review desk." src="docs/diagrams/architecture.svg">
+</picture>
+
+Every outcome is an event, so each failure state can be tested without a server, and a paused run is kept in the database and not in memory.
+
+## How one run flows
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/diagrams/flow-dark.svg">
+  <img alt="One run that pauses for a person in seven rows: the route pauses, the run is saved and audited, a reviewer answers, the server restarts, the run resumes with the validated answer and the audit log is verified, with an amber row for an answer that cites nothing." src="docs/diagrams/flow.svg">
+</picture>
+
+A run that needs a person is saved, audited and resumed after a restart, and the amber row shows a reviewer's answer that cites nothing being refused with a 422.
+
 ## Prerequisites
 
 | Tool | Version | Used for |
